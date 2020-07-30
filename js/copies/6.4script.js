@@ -42,7 +42,7 @@ const titleClickHandler = function (event) {
   /*********************** add class 'active' to the correct article ********************/
 
   targetActicle.classList.add('active');
-};
+}
 
 /* Module 6.4 */
 
@@ -67,7 +67,8 @@ const titleLinks = function generateTitleLinks() {
   for (let article of articles) {
 
     /************************** get the article id *******************************/
-    const articleId = article.getAttribute('Id');
+    const articleId = article.getAttribute('Id')
+
 
     /************************** find the title element ***************************/
 
@@ -84,16 +85,16 @@ const titleLinks = function generateTitleLinks() {
 
     /******************* insert link into titleList ******************************/
 
-    titleList.insertAdjacentHTML('beforeend', linkHTML);
+    titleList.insertAdjacentHTML("beforeend", linkHTML);
 
     /********************* insert link into html variable *************************/
   }
 
-};
+}
 titleLinks();
 
 const links = document.querySelectorAll('.titles a');
-
+console.log(links);
 for (let link of links) {
   link.addEventListener('click', titleClickHandler);
 }
